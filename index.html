@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio | Your Name</title>
+    <title>Professional Portfolio | Shashank Ramesh</title>
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- AOS for scroll animations -->
@@ -18,12 +18,12 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(226, 232, 240, 0.8);
         }
-        /* Style for the video container to keep 16:9 aspect ratio */
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 */
             height: 0;
             overflow: hidden;
+            border-radius: 12px;
         }
         .video-container iframe {
             position: absolute;
@@ -33,6 +33,13 @@
             height: 100%;
             border: 0;
         }
+        .pub-hidden { display: none; }
+        .social-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            transition: color 0.2s;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
@@ -40,48 +47,53 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 glass-card px-6 py-4">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold tracking-tighter text-blue-600">YN.</h1>
+            <h1 class="text-xl font-bold tracking-tighter text-blue-600">SR.</h1>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
                 <a href="#updates" class="hover:text-blue-600 transition">Updates</a>
                 <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
                 <a href="#publications" class="hover:text-blue-600 transition">Research</a>
                 <a href="#resources" class="hover:text-blue-600 transition">Resources</a>
             </div>
-            <a href="mailto:email@example.com" class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-600 transition">Contact</a>
+            <a href="mailto:shashankramesh180398@gmail.com" class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm hover:bg-blue-600 transition">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
         <div class="flex flex-col md:flex-row items-center gap-12" data-aos="fade-up">
-            <!-- Profile Picture -->
             <div class="relative">
-                <div class="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80" 
-                         alt="Profile Portrait" 
-                         class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                         onerror="this.src='https://via.placeholder.com/400x400?text=Profile+Photo'">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="profile_pic.jpeg" 
+                         alt="Shashank Ramesh" 
+                         class="w-full h-full object-cover">
                 </div>
                 <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-100 rounded-full -z-10 blur-2xl opacity-60"></div>
             </div>
 
-            <!-- Hero Text -->
             <div class="flex-1 text-center md:text-left">
-                <span class="inline-block px-4 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-widest mb-4">Available for Collaboration</span>
+                <span class="inline-block px-4 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-widest mb-4">PhD Candidate @ University of Notre Dame, USA</span>
                 <h2 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
-                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">[Your Name]</span>.
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Shashank Ramesh</span>.
                 </h2>
                 <p class="text-lg text-slate-500 leading-relaxed max-w-2xl">
-                    I am a [Current Role] based in [City]. I specialize in bridging the gap between [Skill A] and [Skill B] to create meaningful solutions.
+                    I research computational robot design, kinematics, and control. Currently focusing on AI-enhanced synthesis of robot mechanisms for grasping and manipulation.
                 </p>
                 <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-                    <button class="flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl hover:shadow-lg transition">
+                    <a href="Shashank_CV.pdf" download="Shashank_Ramesh_CV.pdf" class="flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl hover:shadow-lg transition">
                         <i data-lucide="download" class="w-4 h-4"></i> Download CV
-                    </button>
+                    </a>
                     <div class="flex items-center gap-4 text-slate-400">
-                        <a href="#" class="hover:text-blue-600 transition"><i data-lucide="github"></i></a>
-                        <a href="#" class="hover:text-blue-600 transition"><i data-lucide="linkedin"></i></a>
-                        <a href="#" class="hover:text-blue-600 transition"><i data-lucide="twitter"></i></a>
+                        <!-- LinkedIn SVG -->
+                        <a href="http://linkedin.com/in/sramesh18" class="social-icon hover:text-blue-600 transition" title="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <!-- Google Scholar SVG -->
+                        <a href="https://scholar.google.com/citations?user=j3cJc2MAAAAJ&hl=en&authuser=1" class="social-icon hover:text-blue-500 transition" title="Google Scholar">
+                            <svg viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.828 4.905c1.11-.79 2.46-1.258 3.922-1.305L12 11.25l3.25 1.85a6.974 6.974 0 0 1 3.922 1.305L24 9.5 12 0z"/></svg>
+                        </a>
+                        <a href="https://github.com/shashankramesh" class="social-icon hover:text-slate-900 transition" title="GitHub">
+                            <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -96,101 +108,255 @@
                 <div class="h-px flex-1 bg-slate-100"></div>
             </div>
             <div class="grid gap-6">
-                <!-- Update Item -->
-                <div class="flex gap-6 items-start" data-aos="fade-right">
-                    <div class="text-sm font-mono text-slate-400 pt-1 shrink-0">APR 2024</div>
+                <div class="flex gap-6 items-start" data-aos="fade-right" data-aos-delay="100">
+                    <div class="text-sm font-mono text-slate-400 pt-1 shrink-0">Jan 2026</div>
                     <div>
-                        <h4 class="font-semibold text-slate-800">Started a new position as Lead Researcher at [Company Name].</h4>
-                        <p class="text-sm text-slate-500 mt-1">Focusing on AI integration within educational workflows.</p>
+                        <h4 class="font-semibold text-slate-800">Conducted a Tutorial on Tandem Neural Networks for Robot Mechanism Design</h4>
+                        <p class="text-sm text-slate-500 mt-1">Pontifical University of Chile, Santiago, Chile (Jan 24 - Jan 28).</p>
                     </div>
                 </div>
-                <!-- Update Item -->
-                <div class="flex gap-6 items-start" data-aos="fade-right" data-aos-delay="100">
-                    <div class="text-sm font-mono text-slate-400 pt-1 shrink-0">FEB 2024</div>
+                <div class="flex gap-6 items-start" data-aos="fade-right">
+                    <div class="text-sm font-mono text-slate-400 pt-1 shrink-0">AUG 2025</div>
                     <div>
-                        <h4 class="font-semibold text-slate-800">Presented at the Global Tech Summit in San Francisco.</h4>
-                        <p class="text-sm text-slate-500 mt-1">Discussed the future of decentralized computing architecture.</p>
+                        <h4 class="font-semibold text-slate-800">Awarded the Scientific Artificial Intelligence (SAI) Fellowship.</h4>
+                        <p class="text-sm text-slate-500 mt-1">Notre Dame SAI Initiative (Aug 2025 - Dec 2025).</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Grid -->
-    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="flex justify-between items-end mb-16">
             <div>
-                <h3 class="text-3xl font-bold tracking-tight">Featured Projects</h3>
-                <p class="text-slate-500 mt-2">A selection of my personal and professional work.</p>
+                <h3 class="text-3xl font-bold mb-4">Featured Projects</h3>
+                <p class="text-slate-500 max-w-md">Towards developing advanced robot mechanisms that adopt to challenging environments.</p>
             </div>
-            <a href="#" class="text-blue-600 font-semibold text-sm hover:underline">View All Projects →</a>
+            <div class="hidden md:block">
+                <p class="text-xs font-bold uppercase tracking-widest text-slate-400">Scroll to explore <i data-lucide="arrow-right" class="inline w-3 h-3 ml-1"></i></p>
+            </div>
         </div>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- Project 1 with Video Embed -->
-            <div class="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100" data-aos="fade-up">
-                <div class="video-container bg-slate-900">
-                    <!-- Standardized embed URL for better compatibility -->
-                    <iframe src="https://www.youtube.com/embed/21K7fnodie4" 
-                            title="YouTube video player" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen
-                            referrerpolicy="strict-origin">
-                    </iframe>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Project 1 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="100">
+                <div class="video-container shadow-xl mb-6">
+                    <iframe src="https://www.youtube.com/embed/9-r60PoCb0k" allowfullscreen></iframe>
                 </div>
-                <div class="p-8">
-                    <div class="flex justify-between items-start mb-4">
-                        <h4 class="text-2xl font-bold">Project Video Presentation</h4>
-                        <a href="#" class="p-2 bg-slate-50 rounded-full hover:bg-blue-50 hover:text-blue-600 transition"><i data-lucide="play-circle" class="w-5 h-5"></i></a>
-                    </div>
-                    <p class="text-slate-500 leading-relaxed mb-6">A video demonstration of my latest research findings and implementation process.</p>
-                    <div class="flex gap-2">
-                        <span class="px-3 py-1 bg-slate-50 border border-slate-100 rounded-lg text-xs font-medium text-slate-600">Video</span>
-                        <span class="px-3 py-1 bg-slate-50 border border-slate-100 rounded-lg text-xs font-medium text-slate-600">Demo</span>
-                    </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="text-xl font-bold group-hover:text-blue-600 transition">Mode-switching Compliant Gripper</h4>
+                    <span class="text-xs font-mono bg-indigo-50 text-indigo-600 px-2 py-1 rounded">Mechanism Design</span>
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                    A simple compliant gripper that reconfigures between grasping and sensing modes to overcome the trade-off between power grasp and fingertip sensing solely from motor current feedback.
+                    The gripper finds applications in fruit picking including ripeness estimation with up to 90% accuracy.
+                </p>
+                <div class="flex gap-3">
+                    <a href="#" class="text-xs font-bold uppercase border-b-2 border-slate-900 pb-1 hover:text-blue-600 hover:border-blue-600 transition">View Paper Published in IEEE RAL 2026</a>
                 </div>
             </div>
 
-            <!-- Project 2 (Regular Image) -->
-            <div class="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100" data-aos="fade-up" data-aos-delay="100">
-                <div class="aspect-video bg-slate-100 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <!-- Project 2 -->
+            <div class="group" data-aos="fade-up">
+                <div class="video-container shadow-xl mb-6">
+                    <iframe src="https://www.youtube.com/embed/9TSC2p7ASU4" allowfullscreen></iframe>
                 </div>
-                <div class="p-8">
-                    <div class="flex justify-between items-start mb-4">
-                        <h4 class="text-2xl font-bold">Data Insights Dashboard</h4>
-                        <a href="#" class="p-2 bg-slate-50 rounded-full hover:bg-blue-50 hover:text-blue-600 transition"><i data-lucide="github" class="w-5 h-5"></i></a>
-                    </div>
-                    <p class="text-slate-500 leading-relaxed mb-6">Built a real-time visualization tool for supply chain monitoring using D3.js and Python backend.</p>
-                    <div class="flex gap-2">
-                        <span class="px-3 py-1 bg-slate-50 border border-slate-100 rounded-lg text-xs font-medium text-slate-600">Python</span>
-                        <span class="px-3 py-1 bg-slate-50 border border-slate-100 rounded-lg text-xs font-medium text-slate-600">D3.js</span>
-                    </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="text-xl font-bold group-hover:text-blue-600 transition">High Payload Direct Drive Manipulator</h4>
+                    <span class="text-xs font-mono bg-blue-50 text-blue-600 px-2 py-1 rounded">Kinematics</span>
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                    An assymetric five-bar manipulator exhibits 3.75x increase in payload capacity, 2x increase in dynamic tracking accuracy and at least 3.7x reduction in power consumption compared to conventional manipulators using gearless motors (direct-drive). 
+                </p>
+                <div class="flex gap-3">
+                    <a href="#" class="text-xs font-bold uppercase border-b-2 border-slate-900 pb-1 hover:text-blue-600 hover:border-blue-600 transition">View Paper Published in IJRR 2024</a>
                 </div>
             </div>
         </div>
+        
     </section>
 
     <!-- Research Publications -->
     <section id="publications" class="py-20 px-6 bg-slate-900 text-white">
         <div class="max-w-6xl mx-auto">
             <div class="mb-12">
-                <h3 class="text-3xl font-bold mb-4">Research & Publications</h3>
-                <p class="text-slate-400">Academic contributions and white papers.</p>
+                <h3 class="text-3xl font-bold mb-4">Research Publications</h3>
+                <p class="text-slate-400">Journal and conference proceedings in reverse chronological order.</p>
             </div>
             
-            <div class="space-y-8">
-                <div class="group flex flex-col md:flex-row gap-4 p-6 rounded-2xl border border-slate-800 hover:bg-slate-800 transition duration-300" data-aos="fade-up">
-                    <div class="shrink-0 text-blue-400 font-mono text-sm">2023</div>
-                    <div>
-                        <h4 class="text-xl font-semibold mb-2 group-hover:text-blue-400 transition">Evolutionary Algorithms in Urban Planning</h4>
-                        <p class="text-slate-400 text-sm italic mb-3">Published in the International Journal of Computational Science.</p>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-4">Study on how genetic algorithms can optimize traffic flow in high-density urban environments.</p>
-                        <a href="#" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-400 hover:text-white transition">
-                            Read Paper <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-                        </a>
+            <div id="publications-list" class="space-y-6">
+                
+                <!-- 2026 -->
+                <div class="group p-6 rounded-2xl border border-slate-800 hover:bg-slate-800/50 transition duration-300">
+                    <div class="flex flex-col md:flex-row md:items-start gap-4">
+                        <div class="shrink-0 text-blue-400 font-mono text-sm pt-1.5 w-16">2026</div>
+                        <div class="flex-1">
+                            <p class="text-lg text-slate-200 leading-relaxed">
+                                S. Ramesh, T. Girard and M. Plecnik, "A Simple Compliant Gripper That Reconfigures Between Sensing and Grasping Modes," <span class="italic text-blue-400">IEEE Robotics and Automation Letters (RAL)</span>, vol. 11, no. 3, pp. 3796-3803, March 2026.
+                            </p>
+                            <a href="https://doi.org/10.1109/LRA.2026.3662656" target="_blank" class="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-blue-400 transition">
+                                <i data-lucide="external-link" class="w-3 h-3"></i> doi: 10.1109/LRA.2026.3662656
+                            </a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- 2025 -->
+                <div class="group p-6 rounded-2xl border border-slate-800 hover:bg-slate-800/50 transition duration-300">
+                    <div class="flex flex-col md:flex-row md:items-start gap-4">
+                        <div class="shrink-0 text-blue-400 font-mono text-sm pt-1.5 w-16">2025</div>
+                        <div class="flex-1">
+                            <p class="text-lg text-slate-200 leading-relaxed">
+                                S. Ramesh and M. Plecnik, "A Direct-Drive Gripper Designed by Ellipse Synthesis Across Two Output Modes," in <span class="italic text-blue-400">2025 IEEE International Conference on Robotics and Automation (ICRA)</span>, Atlanta, GA, USA, 2025, pp. 16478-16484.
+                            </p>
+                            <a href="https://doi.org/10.1109/ICRA55743.2025.11127705" target="_blank" class="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-blue-400 transition">
+                                <i data-lucide="external-link" class="w-3 h-3"></i> doi: 10.1109/ICRA55743.2025.11127705
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group p-6 rounded-2xl border border-slate-800 hover:bg-slate-800/50 transition duration-300">
+                    <div class="flex flex-col md:flex-row md:items-start gap-4">
+                        <div class="shrink-0 text-blue-400 font-mono text-sm pt-1.5 w-16">2025</div>
+                        <div class="flex-1">
+                            <p class="text-lg text-slate-200 leading-relaxed">
+                                S. Ramesh and M. Plecnik, "Ellipse Synthesis of the Planar 2R Using Convolutional Neural Networks," in <span class="italic text-blue-400">Proc. ASME 2025 IDETC-CIE</span>, Volume 5: MESA/MR Conference, Anaheim, CA, USA, Aug. 2025.
+                            </p>
+                            <a href="https://doi.org/10.1115/DETC2025-169741" target="_blank" class="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-blue-400 transition">
+                                <i data-lucide="external-link" class="w-3 h-3"></i> doi: 10.1115/DETC2025-169741
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="group p-6 rounded-2xl border border-slate-800 hover:bg-slate-800/50 transition duration-300">
+                    <div class="flex flex-col md:flex-row md:items-start gap-4">
+                        <div class="shrink-0 text-blue-400 font-mono text-sm pt-1.5 w-16">2024</div>
+                        <div class="flex-1">
+                            <p class="text-lg text-slate-200 leading-relaxed">
+                                S. Ramesh and M. Plecnik, "A Direct-drive Five-bar Manipulator with Tuned Directional First-order Kinematics for Low Energy Consumption in Vertical Loading," <span class="italic text-blue-400">International Journal for Robotics Research (IJRR)</span>, vol. 44, no. 2, pp. 317-338, 2024.
+                            </p>
+                            <a href="https://doi.org/10.1177/02783649241266852" target="_blank" class="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-blue-400 transition">
+                                <i data-lucide="external-link" class="w-3 h-3"></i> doi: 10.1177/02783649241266852
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hidden-publications" class="pub-hidden space-y-6">
+                    <!-- More 2024 -->
+                    <div class="group p-6 rounded-2xl border border-slate-800 hover:bg-slate-800/50 transition duration-300">
+                        <div class="flex flex-col md:flex-row md:items-start gap-4">
+                            <div class="shrink-0 text-blue-400 font-mono text-sm pt-1.5 w-16">2024</div>
+                            <div class="flex-1">
+                                <p class="text-lg text-slate-200 leading-relaxed">
+                                    A. M. Kolte, S. Ramesh, and S. Bandyopadhyay, "Analytical derivation of singularity-free tubes in the constant-orientation workspace of 6-6 Stewart platform manipulators," <span class="italic text-blue-400 text-blue-400">Robotica</span>, vol. 42, no. 11, pp. 3839-3866, 2024.
+                                </p>
+                                <a href="https://doi.org/10.1017/S026357472400167X" target="_blank" class="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-blue-400 transition">
+                                    <i data-lucide="external-link" class="w-3 h-3"></i> doi: 10.1017/S026357472400167X
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group p-6 rounded-2xl border border-slate-800 hover:bg-slate-800/50 transition duration-300">
+                        <div class="flex flex-col md:flex-row md:items-start gap-4">
+                            <div class="shrink-0 text-blue-400 font-mono text-sm pt-1.5 w-16">2024</div>
+                            <div class="flex-1">
+                                <p class="text-lg text-slate-200 leading-relaxed">
+                                    S. Ramesh, P. M. Wensing and M. Plecnik, "Output Mode Switching for Parallel Five-bar Manipulators Using a Projection-based Direct Collocation Method," in <span class="italic text-blue-400">Proc. 6th Int. Conf. on Reconfigurable Mechanisms and Robots (ReMAR)</span>, Chicago, IL, USA, 2024, pp. 1-8.
+                                </p>
+                                <a href="https://doi.org/10.1109/ReMAR61031.2024.10617557" target="_blank" class="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-blue-400 transition">
+                                    <i data-lucide="external-link" class="w-3 h-3"></i> doi: 10.1109/ReMAR61031.2024.10617557
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group p-6 rounded-2xl border border-slate-800 hover:bg-slate-800/50 transition duration-300">
+                        <div class="flex flex-col md:flex-row md:items-start gap-4">
+                            <div class="shrink-0 text-blue-400 font-mono text-sm pt-1.5 w-16">2024</div>
+                            <div class="flex-1">
+                                <p class="text-lg text-slate-200 leading-relaxed">
+                                    S. Ramesh and M. Plecnik, "Synthesizing the Transmission Properties of a Five-Bar Linkage by Shaping Workspace Bounds," in <span class="italic text-blue-400">Advances in Robot Kinematics 2024</span>, Springer Proceedings in Advanced Robotics, vol 31, 2024.
+                                </p>
+                                <a href="https://doi.org/10.1007/978-3-031-64057-5_21" target="_blank" class="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-blue-400 transition">
+                                    <i data-lucide="external-link" class="w-3 h-3"></i> doi: 10.1007/978-3-031-64057-5_21
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="group p-6 rounded-2xl border border-slate-800 hover:bg-slate-800/50 transition duration-300">
+                        <div class="flex flex-col md:flex-row md:items-start gap-4">
+                            <div class="shrink-0 text-blue-400 font-mono text-sm pt-1.5 w-16">2023</div>
+                            <div class="flex-1">
+                                <p class="text-lg text-slate-200 leading-relaxed">
+                                    P. Golla, S. Ramesh and S. Bandyopadhyay, "Kinematics of the Hybrid 6-Axis (H6A) manipulator," <span class="italic text-blue-400 text-blue-400">Robotica</span>, vol. 41, no. 8, pp. 2251-2282, 2023.
+                                </p>
+                                <a href="https://doi.org/10.1017/S0263574723000334" target="_blank" class="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-blue-400 transition">
+                                    <i data-lucide="external-link" class="w-3 h-3"></i> doi: 10.1017/S0263574723000334
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div class="group p-6 rounded-2xl border border-slate-800 hover:bg-slate-800/50 transition duration-300">
+                        <div class="flex flex-col md:flex-row md:items-start gap-4">
+                            <div class="shrink-0 text-blue-400 font-mono text-sm pt-1.5 w-16">2022</div>
+                            <div class="flex-1">
+                                <p class="text-lg text-slate-200 leading-relaxed">
+                                    N. Govindan, S. Ramesh and A. Thondiyath, "A new gripper that acts as an active and passive joint to facilitate prehensile grasping and locomotion," in <span class="italic text-blue-400">2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</span>, Kyoto, Japan, 2022, pp. 1425-1431.
+                                </p>
+                                <a href="https://doi.org/10.1109/IROS47612.2022.9981475" target="_blank" class="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-blue-400 transition">
+                                    <i data-lucide="external-link" class="w-3 h-3"></i> doi: 10.1109/IROS47612.2022.9981475
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group p-6 rounded-2xl border border-slate-800 hover:bg-slate-800/50 transition duration-300">
+                        <div class="flex flex-col md:flex-row md:items-start gap-4">
+                            <div class="shrink-0 text-blue-400 font-mono text-sm pt-1.5 w-16">2022</div>
+                            <div class="flex-1">
+                                <p class="text-lg text-slate-200 leading-relaxed">
+                                    S. Ramesh, P. Golla, P. K. Prasad and S. Bandyopadhyay, "Forward Kinematics of a Novel 6-DoF Spatial Hybrid Manipulator," in <span class="italic text-blue-400">Advances in Robot Kinematics 2022</span>, Springer Proceedings in Advanced Robotics, vol 24, 2022.
+                                </p>
+                                <a href="https://doi.org/10.1007/978-3-031-08140-8_20" target="_blank" class="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-blue-400 transition">
+                                    <i data-lucide="external-link" class="w-3 h-3"></i> doi: 10.1007/978-3-031-08140-8_20
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2020 -->
+                    <div class="group p-6 rounded-2xl border border-slate-800 hover:bg-slate-800/50 transition duration-300">
+                        <div class="flex flex-col md:flex-row md:items-start gap-4">
+                            <div class="shrink-0 text-blue-400 font-mono text-sm pt-1.5 w-16">2020</div>
+                            <div class="flex-1">
+                                <p class="text-lg text-slate-200 leading-relaxed">
+                                    N. Govindan, S. Ramesh and A. Thondiyath, "Design of a Variable Stiffness Joint Module to Quickly Change the Stiffness and to Reduce the Power Consumption," <span class="italic text-blue-400">IEEE Access</span>, vol. 8, pp. 138318-138330, 2020.
+                                </p>
+                                <a href="https://doi.org/10.1109/ACCESS.2020.3012031" target="_blank" class="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-blue-400 transition">
+                                    <i data-lucide="external-link" class="w-3 h-3"></i> doi: 10.1109/ACCESS.2020.3012031
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expand Button -->
+            <div class="mt-10 text-center">
+                <button id="toggle-pubs-btn" class="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-slate-700 hover:border-blue-400 hover:text-blue-400 transition duration-300 text-sm font-semibold">
+                    <span id="btn-text">View Full Bibliography</span>
+                    <i data-lucide="chevron-down" id="btn-icon" class="w-4 h-4 transition-transform duration-300"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -198,19 +364,19 @@
     <!-- Resources Section -->
     <section id="resources" class="py-20 px-6 max-w-6xl mx-auto">
         <div class="text-center mb-16">
-            <h3 class="text-3xl font-bold mb-4">Resource Library</h3>
-            <p class="text-slate-500">Free templates, guides, and tools I've shared with the community.</p>
+            <h3 class="text-3xl font-bold mb-4">Lecture Materials</h3>
+            <p class="text-slate-500">Tutorials and teaching materials from my workshops.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition flex items-center gap-4" data-aos="zoom-in">
-                <div class="w-12 h-12 rounded-xl bg-red-50 text-red-500 flex items-center justify-center shrink-0">
-                    <i data-lucide="file-text"></i>
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center shrink-0">
+                    <i data-lucide="presentation"></i>
                 </div>
                 <div class="overflow-hidden">
-                    <h5 class="font-bold truncate">Project Planning Template</h5>
-                    <p class="text-xs text-slate-400">PDF • 1.2 MB</p>
-                    <a href="#" class="text-xs text-blue-600 font-bold uppercase mt-2 block hover:underline">Download</a>
+                    <h5 class="font-bold truncate">Intro to Image Regression</h5>
+                    <p class="text-xs text-slate-400">SAI Spark Tutorials 2026</p>
+                    <a href="#" class="text-xs text-blue-600 font-bold uppercase mt-2 block hover:underline">View Slides</a>
                 </div>
             </div>
         </div>
@@ -218,7 +384,7 @@
 
     <!-- Footer -->
     <footer class="py-12 bg-white border-t border-slate-100 text-center">
-        <p class="text-slate-400 text-sm">© 2024 Your Name. Built with curiosity and code.</p>
+        <p class="text-slate-400 text-sm">© 2026 Shashank Ramesh. Built with Tailwind & Lucide.</p>
     </footer>
 
     <!-- Scripts -->
@@ -226,6 +392,26 @@
     <script>
         AOS.init({ duration: 800, once: true, easing: 'ease-out' });
         lucide.createIcons();
+
+        const toggleBtn = document.getElementById('toggle-pubs-btn');
+        const hiddenPubs = document.getElementById('hidden-publications');
+        const btnText = document.getElementById('btn-text');
+        const btnIcon = document.getElementById('btn-icon');
+
+        toggleBtn.addEventListener('click', () => {
+            const isHidden = hiddenPubs.style.display === 'none' || hiddenPubs.style.display === '';
+            
+            if (isHidden) {
+                hiddenPubs.style.display = 'block';
+                btnText.textContent = 'Show Less';
+                btnIcon.style.transform = 'rotate(180deg)';
+            } else {
+                hiddenPubs.style.display = 'none';
+                btnText.textContent = 'View Full Bibliography';
+                btnIcon.style.transform = 'rotate(0deg)';
+                document.getElementById('publications').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     </script>
 </body>
 </html>
