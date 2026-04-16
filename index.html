@@ -40,6 +40,27 @@
             fill: currentColor;
             transition: color 0.2s;
         }
+        /* Hidden scrollbar but functional scrolling */
+        .project-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .project-scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        .project-card {
+            scroll-snap-align: start;
+            flex: 0 0 100%; /* Mobile: 1 card visible */
+        }
+        @media (min-width: 768px) {
+            .project-card {
+                flex: 0 0 calc(50% - 1.25rem); /* Desktop: 2 cards visible */
+            }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
@@ -127,20 +148,29 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto overflow-hidden">
         <div class="flex justify-between items-end mb-16">
             <div>
                 <h3 class="text-3xl font-bold mb-4">Featured Projects</h3>
                 <p class="text-slate-500 max-w-md">Towards developing advanced robot mechanisms that adopt to challenging environments.</p>
             </div>
-            <div class="hidden md:block">
-                <p class="text-xs font-bold uppercase tracking-widest text-slate-400">Scroll to explore <i data-lucide="arrow-right" class="inline w-3 h-3 ml-1"></i></p>
+            <div class="flex flex-col items-end">
+                <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Explore <i data-lucide="arrow-right" class="inline w-3 h-3 ml-1"></i></p>
+                <div class="flex gap-2">
+                    <button onclick="document.getElementById('project-slider').scrollBy({left: -400, behavior: 'smooth'})" class="p-2 border border-slate-200 rounded-full hover:bg-slate-100 transition active:scale-90">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    </button>
+                    <button onclick="document.getElementById('project-slider').scrollBy({left: 400, behavior: 'smooth'})" class="p-2 border border-slate-200 rounded-full hover:bg-slate-100 transition active:scale-90">
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <!-- Project 1 -->
-            <div class="group" data-aos="fade-up" data-aos-delay="100">
+        <!-- Scrollable Project Container -->
+        <div id="project-slider" class="project-scroll-container gap-10">
+            <!-- Project 1: Mode-switching Compliant Gripper -->
+            <div class="project-card group" data-aos="fade-up" data-aos-delay="100">
                 <div class="video-container shadow-xl mb-6">
                     <iframe src="https://www.youtube.com/embed/9-r60PoCb0k" allowfullscreen></iframe>
                 </div>
@@ -157,8 +187,8 @@
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="group" data-aos="fade-up">
+            <!-- Project 2: High Payload Direct Drive Manipulator -->
+            <div class="project-card group" data-aos="fade-up" data-aos-delay="200">
                 <div class="video-container shadow-xl mb-6">
                     <iframe src="https://www.youtube.com/embed/9TSC2p7ASU4" allowfullscreen></iframe>
                 </div>
@@ -173,8 +203,24 @@
                     <a href="https://doi.org/10.1177/02783649241266852" class="text-xs font-bold uppercase border-b-2 border-slate-900 pb-1 hover:text-blue-600 hover:border-blue-600 transition">View Paper Published in IJRR 2024</a>
                 </div>
             </div>
+
+            <!-- Project 3: Direct-drive Mode-switching Gripper -->
+            <div class="project-card group" data-aos="fade-up" data-aos-delay="300">
+                <div class="video-container shadow-xl mb-6">
+                    <iframe src="https://www.youtube.com/embed/YdhDfLqPUO0" allowfullscreen></iframe>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="text-xl font-bold group-hover:text-blue-600 transition">Direct-drive Mode-switching Gripper</h4>
+                    <span class="text-xs font-mono bg-blue-50 text-blue-600 px-2 py-1 rounded">Mechanism Design</span>
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed mb-4">
+                    A gripper using direct-drive actuators switches between grasping and sensing modes to achieve power grasp and fingertip sensing solely from motor current feedback. Sense mode can sense forces 3x smaller than grip mode. Grip mode exerts forces 4x greater than sense mode.
+                </p>
+                <div class="flex gap-3">
+                    <a href="https://doi.org/10.1109/ICRA55743.2025.11127705" class="text-xs font-bold uppercase border-b-2 border-slate-900 pb-1 hover:text-blue-600 hover:border-blue-600 transition">View Paper Published in ICRA 2025</a>
+                </div>
+            </div>
         </div>
-        
     </section>
 
     <!-- Research Publications -->
@@ -362,7 +408,7 @@
     </section>
 
     <!-- Resources Section -->
-    <section id="resources" class="py-20 px-6 max-w-6xl mx-auto">
+    <!-- <section id="resources" class="py-20 px-6 max-w-6xl mx-auto">
         <div class="text-center mb-16">
             <h3 class="text-3xl font-bold mb-4">Lecture Materials</h3>
             <p class="text-slate-500">Tutorials and teaching materials from my workshops.</p>
@@ -380,7 +426,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer class="py-12 bg-white border-t border-slate-100 text-center">
